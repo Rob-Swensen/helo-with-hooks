@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-function Nav() {
+function Nav(props) {
+  console.log(props)
   return (
     <div>
       <Link to="/dashboard">Home</Link>
@@ -11,4 +13,6 @@ function Nav() {
   );
 }
 
-export default Nav;
+const mapStateToProps = reduxState => reduxState;
+
+export default connect(mapStateToProps)(Nav);

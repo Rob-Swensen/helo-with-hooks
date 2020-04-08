@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
-    return(
-        <div>Nav Component</div>
-    )
+  return (
+    <div>
+      <Link to="/dashboard">Home</Link>
+      <Link to="/new">New Post</Link>
+      <Link to="/">Logout</Link>
+    </div>
+  );
 }
 
 export default Nav;
